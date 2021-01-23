@@ -1,0 +1,167 @@
+@import url("https://fonts.googleapis.com/css2?family=Spartan:wght@400;500;700&display=swap");
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body {
+  font-family: "Spartan", sans-serif;
+  color: #333;
+  line-height: 1.6;
+  background: url(/images/bg-pattern-top-desktop.svg),
+    url(/images/bg-pattern-bottom-desktop.svg);
+  background-position: left top, right bottom;
+  background-repeat: no-repeat;
+}
+a {
+  text-decoration: none;
+  color: #333;
+}
+
+p {
+  font-size: 15px;
+  padding: 10px;
+}
+
+/* utilities */
+.contanier {
+  background-color: transparent;
+  margin: auto;
+  align-items: center;
+  padding: 30px;
+  max-width: 1400px;
+}
+.box {
+  padding: 10px;
+  margin-bottom: 15px;
+  background-color: hsl(300, 24%, 96%);
+  border-radius: 10px;
+  max-width: 500px;
+  min-width: 400px;
+}
+.grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  column-gap: 60px;
+}
+.grid :hover {
+  transform: scale(0.98);
+}
+.flex {
+  display: flex;
+  justify-content: space-between;
+}
+
+/*logo*/
+.logo h1 {
+  color: hsl(300, 43%, 22%);
+  width: 400px;
+  font-size: 40px;
+  padding: 10px;
+  margin: 5px;
+}
+.text {
+  max-width: 400px;
+}
+.Box1 {
+  margin-left: 25px;
+}
+.Box2 {
+  margin-left: 50px;
+}
+/* rating*/
+.rating {
+  list-style: none;
+}
+.icon {
+  background-image: url(/images/icon-star.svg);
+  background-repeat: repeat-x;
+  height: 20px;
+  width: 85px;
+  margin: 0;
+  margin-right: 10px;
+  justify-content: center;
+  justify-self: center;
+}
+.box1 {
+  display: grid;
+  grid-template-columns: 30% 70%;
+  column-gap: 10px;
+  align-items: center;
+  font-size: 14px bold;
+  justify-content: center;
+  color: hsl(303, 10%, 53%);
+  font-weight: 700;
+}
+
+/* reviwes*/
+.reviwers {
+  grid-template-columns: 1fr 1fr 1fr;
+  margin-top: 60px;
+  transform: skewY(3deg);
+}
+
+.reviwers-box {
+  width: 100%;
+  max-width: 400px;
+  background-color: hsl(300, 43%, 22%);
+  color: white;
+  padding: 40px;
+}
+
+.reviwers-name {
+  display: grid;
+  grid-template-columns: 100px 300px;
+  column-gap: 5px;
+  margin-bottom: 10px;
+}
+.reviwers-name img {
+  grid-row-start: 1;
+  grid-row-end: 3;
+  height: 50px;
+}
+.name {
+  color: white;
+  font-size: 14px;
+}
+.statue {
+  color: hsl(333, 80%, 67%);
+  font-size: 14px;
+}
+
+.reviwers-box img {
+  border-radius: 50%;
+  margin: 0;
+}
+
+/* footer*/
+footer {
+  height: 50px;
+  align-items: center;
+  text-align-last: center;
+  padding-top: 10px;
+}
+
+/*mobiles*/
+@media (max-width: 500px) {
+  body {
+    background: url(/images/bg-pattern-top-mobile.svg),
+      url(/images/bg-pattern-bottom-mobile.svg);
+    background-position: left top, right bottom;
+    background-repeat: no-repeat;
+  }
+  .flex {
+    flex-direction: column;
+  }
+  .flex li {
+    margin-left: 0;
+  }
+  .box1 {
+    grid-template-columns: none;
+    grid-template-rows: 1fr 1fr;
+  }
+  .reviwers {
+    grid-template-columns: none;
+    grid-template-rows: 1fr 1fr 1fr;
+  }
+}
